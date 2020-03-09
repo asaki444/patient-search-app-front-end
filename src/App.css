@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.search_div {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -32,7 +32,16 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.search-div {
+  width: 100%;
+}
+
+.search-div h2 {
+  margin-left: 100px;
 }

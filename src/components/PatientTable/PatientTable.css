@@ -1,0 +1,9 @@
+.patient_table{
+    margin-top: 50px;
+    width: 800px;
+    border: 1px solid white;
+}
+
+.patient_table th{
+    text-align: left;
+}
