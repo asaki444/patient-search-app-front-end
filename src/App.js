@@ -5,18 +5,26 @@ import NotFound from './components/NotFound/NotFound';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Form from './components/Form/Form';
+import { display } from '@material-ui/system';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      displaySearch: false
+      displaySearch: true,
+      patients: []
     };
   }
 
+  
+
 
   render() {
+     const{
+       displaySearch,
+       patients
+     } = this.state;
 
     return (
       <div className="search_div">
@@ -24,7 +32,7 @@ class App extends React.Component {
            <p>
              Use the form below to search for patient information:
              </p>
-           <Form />
+           <Form displaySearch={displaySearch} patients={patients}  />
       </div>
     )
   }
