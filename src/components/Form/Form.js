@@ -6,6 +6,7 @@ import './Form.css';
 import { withStyles } from '@material-ui/core/styles';
 import Select from '@material-ui/core/Select';
 import Error from '../Error/Error';
+import PatientTable from '../PatientTable/PatientTable';
 
 
 const StyledButton = withStyles({
@@ -78,7 +79,7 @@ class Form extends React.Component {
     }
 
   render() {
-    const {selected, search_text, showError} = this.state;
+    const {selected, search_text, showError, patients} = this.state;
    console.log(showError)
     return (
       <>
@@ -102,6 +103,7 @@ class Form extends React.Component {
         </form>
 
          {showError && <Error message={"uh oh, looks like nothing is entered"}/>}
+         {patients.length > 0 && search_text !== "" ? <PatientTable patients={patients}/> : <Error message={"No Patient Found"}/>}
     </>
     )
   }
